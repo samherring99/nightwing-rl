@@ -270,6 +270,5 @@ class RLTrainer:
             self.save_checkpoint("interrupted_checkpoint.pt")
             
     def save_checkpoint(self, path: str):
-        """Save INT8 model checkpoint."""
         self.model.save_pretrained(path)
         self.tokenizer.save_pretrained(path)
